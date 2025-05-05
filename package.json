@@ -1,0 +1,22 @@
+{
+  "name": "country-info-explorer",
+  "version": "1.0.0",
+  "description": "A simple app where you can query information about countries — like their capital, population, region, and flag — using GraphQL.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Meghana N",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-graphql": "^0.12.0",
+    "fetch": "^1.1.0",
+    "graphql": "^15.10.1",
+    "ip": "^2.0.1",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.10"
+  }
+}
