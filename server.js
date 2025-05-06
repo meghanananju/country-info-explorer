@@ -16,10 +16,14 @@ const schema = buildSchema(`
     name: String
     capital: String
     region: String
+    subregion: String
+    borders: [String]
     population: Int
     flag: String
     area: Float
     mapLink: String
+    latlng: [String]
+    
   }
 
 
@@ -48,10 +52,14 @@ const root = {
                 name: country.name.common,
                 capital: country.capital[0],
                 region: country.region,
+                subregion: country.subregion,
+                borders: country.borders,
                 population: country.population,
                 area: country.area,
                 flag: country.flags?.png,
-                mapLink: country.maps?.googleMaps
+                mapLink: country.maps?.googleMaps,
+                latlng: country.capitalInfo.latlng
+
             };
         } catch (error) {
             console.error('Error fetching country data:', error);
